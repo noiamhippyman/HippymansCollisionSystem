@@ -1,0 +1,1 @@
+demoIndex = min(demoIndex+1,DEMO.LASTDEMO-1);
