@@ -3,7 +3,7 @@
 var r = argument0;
 var nr = argument1;
 
-var c = r[eOrientedRect.HalfSize];
+var c = r[eShapeOrientedRect.HalfSize];
 switch (nr mod 4) {
 	case 0:
 		c[0] = -c[0];
@@ -21,5 +21,5 @@ switch (nr mod 4) {
 	break;
 }
 
-c = vec2_rotate(c, r[eOrientedRect.Angle]);
-return vec2_add(c, r[eOrientedRect.Origin]);
+c = vec2_rotate(c, r[eShapeOrientedRect.Angle]);
+return vec2_add(c, r[eShapeOrientedRect.Center]);

@@ -5,7 +5,7 @@ var r = argument1;
 
 var rEdge0 = oriented_rectangle_edge(r, 0);
 var rEdge2 = oriented_rectangle_edge(r, 2);
-var n = vec2_subtract(s[eLineSegment.A], s[eLineSegment.B]);
+var n = vec2_subtract(s[eShapeLineSegment.Point1], s[eShapeLineSegment.Point2]);
 
 var axisRange = project_segment(s, n);
 var r0Range = project_segment(rEdge0, n);

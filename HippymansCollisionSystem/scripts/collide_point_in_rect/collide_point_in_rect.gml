@@ -2,8 +2,8 @@
 /// @arg vec2,rect
 var v = argument0;
 var r = argument1;
-var ro = r[eRect.Origin];
-var rs = r[eRect.Size];
+var ro = r[eShapeRect.Origin];
+var rs = r[eShapeRect.Size];
 
 var left = ro[0];
 var right = left + rs[0];

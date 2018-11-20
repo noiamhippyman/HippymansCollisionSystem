@@ -3,11 +3,11 @@
 var c = argument0;
 var r = argument1;
 var lr = shape_rectangle(0,0,0,0);
-lr[eRect.Size] = vec2_multiply(r[eOrientedRect.HalfSize], 2);
+lr[eShapeRect.Size] = vec2_multiply(r[eShapeOrientedRect.HalfSize], 2);
 
-var lc = shape_circle(0,0,c[eCircle.Radius]);
-var dist = vec2_subtract(c[eCircle.Center], r[eOrientedRect.Origin]);
-dist = vec2_rotate(dist, -r[eOrientedRect.Angle]);
-lc[eCircle.Center] = vec2_add(dist, r[eOrientedRect.HalfSize]);
+var lc = shape_circle(0,0,c[eShapeCircle.Radius]);
+var dist = vec2_subtract(c[eShapeCircle.Center], r[eShapeOrientedRect.Center]);
+dist = vec2_rotate(dist, -r[eShapeOrientedRect.Angle]);
+lc[eShapeCircle.Center] = vec2_add(dist, r[eShapeOrientedRect.HalfSize]);
 
 return collide_circle_in_rect(lc,lr);

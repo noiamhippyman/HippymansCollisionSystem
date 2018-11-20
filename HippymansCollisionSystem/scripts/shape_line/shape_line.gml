@@ -6,6 +6,7 @@ var dx = argument2;
 var dy = argument3;
 
 var shape = [];
-shape[eLine.Base] = vec2(bx,by);
-shape[eLine.Direction] = vec2(dx,dy);
+shape[SHAPE_TYPE] = eShapeType.Line;
+shape[eShapeLine.Base] = vec2(bx,by);
+shape[eShapeLine.Direction] = vec2(dx,dy);
 return shape;

@@ -7,7 +7,8 @@ var halfHeight = argument3;
 var angle = argument4;
 
 var shape = [];
-shape[eOrientedRect.Origin] = vec2(rx,ry);
-shape[eOrientedRect.HalfSize] = vec2(halfWidth,halfHeight);
-shape[eOrientedRect.Angle] = angle;
+shape[SHAPE_TYPE] = eShapeType.OrientedRect;
+shape[eShapeOrientedRect.Center] = vec2(rx,ry);
+shape[eShapeOrientedRect.HalfSize] = vec2(halfWidth,halfHeight);
+shape[eShapeOrientedRect.Angle] = angle;
 return shape;

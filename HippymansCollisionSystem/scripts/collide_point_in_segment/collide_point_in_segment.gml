@@ -1,8 +1,8 @@
 /// @desc collide_point_in_segment(vec2,segment);
 var v = argument0;
 var s = argument1;
-var sp1 = s[eLineSegment.A];
-var sp2 = s[eLineSegment.B];
+var sp1 = s[eShapeLineSegment.Point1];
+var sp2 = s[eShapeLineSegment.Point2];
 
 var d = vec2_subtract(sp2,sp1);
 var lp = vec2_subtract(v, sp1);

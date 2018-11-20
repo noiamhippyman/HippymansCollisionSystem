@@ -5,8 +5,8 @@ var nr = argument1;
 
 
 var edge = shape_line_segment(0,0,0,0);
-var a = r[eOrientedRect.HalfSize];
-var b = r[eOrientedRect.HalfSize];
+var a = r[eShapeOrientedRect.HalfSize];
+var b = r[eShapeOrientedRect.HalfSize];
 
 switch (nr mod 3) {
 	case 0:
@@ -28,12 +28,12 @@ switch (nr mod 3) {
 	break;
 }
 
-a = vec2_rotate(a, r[eOrientedRect.Angle]);
-a = vec2_add(a, r[eOrientedRect.Origin]);
+a = vec2_rotate(a, r[eShapeOrientedRect.Angle]);
+a = vec2_add(a, r[eShapeOrientedRect.Center]);
 
-b = vec2_rotate(b, r[eOrientedRect.Angle]);
-b = vec2_add(b, r[eOrientedRect.Origin]);
+b = vec2_rotate(b, r[eShapeOrientedRect.Angle]);
+b = vec2_add(b, r[eShapeOrientedRect.Center]);
 
-edge[eLineSegment.A] = a;
-edge[eLineSegment.B] = b;
+edge[eShapeLineSegment.Point1] = a;
+edge[eShapeLineSegment.Point2] = b;
 return edge;

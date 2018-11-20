@@ -1,8 +1,8 @@
 /// @desc debug_draw_line(line);
 /// @arg line
 var line = argument0;
-var lbase = line[eLine.Base];
-var ldir = line[eLine.Direction];
+var lbase = line[eShapeLine.Base];
+var ldir = line[eShapeLine.Direction];
 
 var size = max(room_width,room_height);
 var angle = point_direction(0,0,ldir[0],ldir[1]);

@@ -2,7 +2,7 @@
 /// @arg orientedRect
 var r = argument0;
 var h = shape_rectangle(0,0,0,0);
-h[eRect.Origin] = r[eOrientedRect.Origin];
+h[eShapeRect.Origin] = r[eShapeOrientedRect.Center];
 
 for (var nr = 0; nr < 4; ++nr) {
 	var corner = oriented_rectangle_corner(r, nr);

@@ -2,14 +2,14 @@
 /// @arg segment,rect
 var s = argument0;
 var r = argument1;
-var sp1 = s[eLineSegment.A];
-var sp2 = s[eLineSegment.B];
-var ro = r[eRect.Origin];
-var rs = r[eRect.Size];
+var sp1 = s[eShapeLineSegment.Point1];
+var sp2 = s[eShapeLineSegment.Point2];
+var ro = r[eShapeRect.Origin];
+var rs = r[eShapeRect.Size];
 
 var sLine = shape_line(0,0,0,0);
-sLine[eLine.Base] = sp1;
-sLine[eLine.Direction] = vec2_subtract(sp2, sp1);
+sLine[eShapeLine.Base] = sp1;
+sLine[eShapeLine.Direction] = vec2_subtract(sp2, sp1);
 if (!collide_line_in_rect(sLine,r)) return false;
 
 var rRange = vec2(ro[0],ro[0]+rs[0]);

@@ -2,17 +2,17 @@
 /// @arg segment,rect
 var s = argument0;
 var r = argument1;
-var sp1 = s[eLineSegment.A];
-var sp2 = s[eLineSegment.B];
+var sp1 = s[eShapeLineSegment.Point1];
+var sp2 = s[eShapeLineSegment.Point2];
 
 var n = vec2_subtract(sp1,sp2);
 
 var rEdgeA = shape_line_segment(0,0,0,0);
 var rEdgeB = shape_line_segment(0,0,0,0);
-rEdgeA[eLineSegment.A] = rectangle_corner(r, 0);
-rEdgeA[eLineSegment.B] = rectangle_corner(r, 1);
-rEdgeB[eLineSegment.A] = rectangle_corner(r, 2);
-rEdgeB[eLineSegment.B] = rectangle_corner(r, 3);
+rEdgeA[eShapeLineSegment.Point1] = rectangle_corner(r, 0);
+rEdgeA[eShapeLineSegment.Point2] = rectangle_corner(r, 1);
+rEdgeB[eShapeLineSegment.Point1] = rectangle_corner(r, 2);
+rEdgeB[eShapeLineSegment.Point2] = rectangle_corner(r, 3);
 
 var rEdgeARange = project_segment(rEdgeA, n);
 var rEdgeBRange = project_segment(rEdgeB, n);

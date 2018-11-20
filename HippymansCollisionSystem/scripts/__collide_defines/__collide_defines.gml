@@ -1,0 +1,10 @@
+#macro COL_LINE_LINESEG global.__colFlagLineLineSeg
+#macro COL_LINE_CIRCLE global.__colFlagLineCircle
+#macro COL_LINE_RECT global.__colFlagLineRect
+#macro COL_LINE_ORECT global.__colFlagLineOrect
+#macro COL_LINESEG_CIRCLE global.__colFlagLineSegCircle
+#macro COL_LINESEG_RECT global.__colFlagLineSegRect
+#macro COL_LINESEG_ORECT global.__colFlagLineSegOrect
+#macro COL_CIRCLE_RECT global.__colFlagCircleRect
+#macro COL_CIRCLE_ORECT global.__colFlagCircleOrect
+#macro COL_RECT_ORECT global.__colFlagRectOrect

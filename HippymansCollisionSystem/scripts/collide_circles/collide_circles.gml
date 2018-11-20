@@ -3,10 +3,10 @@
 var a = argument0;
 var b = argument1;
 
-var aCenter = a[eCircle.Center];
-var aRadius = a[eCircle.Radius];
-var bCenter = b[eCircle.Center];
-var bRadius = b[eCircle.Radius];
+var aCenter = a[eShapeCircle.Center];
+var aRadius = a[eShapeCircle.Radius];
+var bCenter = b[eShapeCircle.Center];
+var bRadius = b[eShapeCircle.Radius];
 
 var radSum = aRadius + bRadius;
 var dist = vec2_subtract(aCenter,bCenter);

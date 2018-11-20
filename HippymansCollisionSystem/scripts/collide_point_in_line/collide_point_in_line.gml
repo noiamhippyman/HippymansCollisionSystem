@@ -2,8 +2,8 @@
 /// @arg vec2,line
 var v = argument0;
 var l = argument1;
-var lbase = l[eLine.Base];
-var ldir = l[eLine.Direction];
+var lbase = l[eShapeLine.Base];
+var ldir = l[eShapeLine.Direction];
 if (collide_points(lbase, v)) return true;
 
 var lp = vec2_subtract(v, lbase);

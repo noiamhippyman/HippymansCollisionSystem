@@ -9,7 +9,8 @@
         "980f85a2-7562-441d-a2f6-0897bd3ee648",
         "927d2ccc-6403-4d13-8f5c-159db69f3db2",
         "3f377306-8472-4b52-b3a1-a4a10361093f",
-        "cede694f-f09c-496b-86aa-e478b6ca5599"
+        "cede694f-f09c-496b-86aa-e478b6ca5599",
+        "534d363c-1522-42cd-a909-2dfc89a53ba8"
     ],
     "filterType": "GMScript",
     "folderName": "shapes",

@@ -3,10 +3,10 @@
 var a = argument0;
 var b = argument1;
 
-var aBase = a[eLine.Base];
-var aDir = a[eLine.Direction];
-var bBase = b[eLine.Base];
-var bDir = b[eLine.Direction];
+var aBase = a[eShapeLine.Base];
+var aDir = a[eShapeLine.Direction];
+var bBase = b[eShapeLine.Base];
+var bDir = b[eShapeLine.Direction];
 
 if (!vec2_parallel(aDir, bDir)) return false;
 

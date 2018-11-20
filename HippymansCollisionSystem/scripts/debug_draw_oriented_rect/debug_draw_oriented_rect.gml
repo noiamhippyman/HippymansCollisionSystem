@@ -1,9 +1,9 @@
 /// @desc debug_draw_oriented_rect(orientedRect);
 /// @arg orientedRect
 var orect = argument0;
-var o = orect[eOrientedRect.Origin];
-var s = orect[eOrientedRect.HalfSize];
-var a = orect[eOrientedRect.Angle];
+var o = orect[eShapeOrientedRect.Center];
+var s = orect[eShapeOrientedRect.HalfSize];
+var a = orect[eShapeOrientedRect.Angle];
 var x1 = -s[0];
 var y1 = -s[1];
 var x2 = s[0];

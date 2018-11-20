@@ -3,22 +3,22 @@
 var s = argument0;
 var r = argument1;
 
-var sp1 = s[eLineSegment.A];
-var sp2 = s[eLineSegment.B];
-var ro = r[eOrientedRect.Origin];
-var rs = r[eOrientedRect.HalfSize];
-var ra = r[eOrientedRect.Angle];
+var sp1 = s[eShapeLineSegment.Point1];
+var sp2 = s[eShapeLineSegment.Point2];
+var ro = r[eShapeOrientedRect.Center];
+var rs = r[eShapeOrientedRect.HalfSize];
+var ra = r[eShapeOrientedRect.Angle];
 
 var lr = shape_rectangle(0,0,0,0);
-lr[eRect.Size] = vec2_multiply(r[eOrientedRect.HalfSize], 2);
+lr[eShapeRect.Size] = vec2_multiply(r[eShapeOrientedRect.HalfSize], 2);
 
 var ls = shape_line_segment(0,0,0,0);
-ls[eLineSegment.A] = vec2_subtract(sp1, ro);
-ls[eLineSegment.A] = vec2_rotate(ls[eLineSegment.A], -ra);
-ls[eLineSegment.A] = vec2_add(ls[eLineSegment.A], rs);
+ls[eShapeLineSegment.Point1] = vec2_subtract(sp1, ro);
+ls[eShapeLineSegment.Point1] = vec2_rotate(ls[eShapeLineSegment.Point1], -ra);
+ls[eShapeLineSegment.Point1] = vec2_add(ls[eShapeLineSegment.Point1], rs);
 
-ls[eLineSegment.B] = vec2_subtract(sp2, ro);
-ls[eLineSegment.B] = vec2_rotate(ls[eLineSegment.B], -ra);
-ls[eLineSegment.B] = vec2_add(ls[eLineSegment.B], rs);
+ls[eShapeLineSegment.Point2] = vec2_subtract(sp2, ro);
+ls[eShapeLineSegment.Point2] = vec2_rotate(ls[eShapeLineSegment.Point2], -ra);
+ls[eShapeLineSegment.Point2] = vec2_add(ls[eShapeLineSegment.Point2], rs);
 
 return collide_line_seg_in_rect(ls, lr);

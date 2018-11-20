@@ -1,8 +1,8 @@
 {
-    "id": "f62d02e3-5e43-482e-841f-130aaa7d2da1",
+    "id": "534d363c-1522-42cd-a909-2dfc89a53ba8",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "EnumShapes",
+    "name": "shape_get_type",
     "IsCompatibility": false,
     "IsDnD": false
 }

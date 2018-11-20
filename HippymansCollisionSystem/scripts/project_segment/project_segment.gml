@@ -5,7 +5,7 @@ var o = argument1;
 
 var ounit = vec2_unit(o);
 
-var dp1 = vec2_dot_product(ounit, s[eLineSegment.A]);
-var dp2 = vec2_dot_product(ounit, s[eLineSegment.B]);
+var dp1 = vec2_dot_product(ounit, s[eShapeLineSegment.Point1]);
+var dp2 = vec2_dot_product(ounit, s[eShapeLineSegment.Point2]);
 var r = vec2(dp1,dp2);
 return vec2_sort(r);

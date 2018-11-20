@@ -6,6 +6,7 @@ var width = argument2;
 var height = argument3;
 
 var shape = [];
-shape[eRect.Origin] = vec2(rx,ry);
-shape[eRect.Size] = vec2(width,height);
+shape[SHAPE_TYPE] = eShapeType.Rect;
+shape[eShapeRect.Origin] = vec2(rx,ry);
+shape[eShapeRect.Size] = vec2(width,height);
 return shape;

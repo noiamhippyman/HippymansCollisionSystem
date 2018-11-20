@@ -3,10 +3,10 @@
 var a = argument0;
 var b = argument1;
 
-var aOrigin = a[eRect.Origin];
-var aSize = a[eRect.Size];
-var bOrigin = b[eRect.Origin];
-var bSize = b[eRect.Size];
+var aOrigin = a[eShapeRect.Origin];
+var aSize = a[eShapeRect.Size];
+var bOrigin = b[eShapeRect.Origin];
+var bSize = b[eShapeRect.Size];
 
 var aLeft = aOrigin[0];
 var aRight = aOrigin[0] + aSize[0];

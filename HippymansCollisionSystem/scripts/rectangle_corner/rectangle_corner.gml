@@ -2,8 +2,8 @@
 /// @arg r,nr
 var r = argument0;
 var nr = argument1;
-var ro = r[eRect.Origin];
-var rs = r[eRect.Size];
+var ro = r[eShapeRect.Origin];
+var rs = r[eShapeRect.Size];
 var corner = ro;
 switch (nr mod 4) {
 	case 0:

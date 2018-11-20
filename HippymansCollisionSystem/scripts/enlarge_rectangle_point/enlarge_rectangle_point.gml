@@ -2,8 +2,8 @@
 /// @arg rect,vec2
 var r = argument0;
 var v = argument1;
-var ro = r[eRect.Origin];
-var rs = r[eRect.Size];
+var ro = r[eShapeRect.Origin];
+var rs = r[eShapeRect.Size];
 
 var enlarged = shape_rectangle(
 	min(ro[0], v[0]),
@@ -12,5 +12,5 @@ var enlarged = shape_rectangle(
 	max(ro[1]+rs[1], v[1])
 );
 
-enlarged[eRect.Size] = vec2_subtract(enlarged[eRect.Size], enlarged[eRect.Origin]);
+enlarged[eShapeRect.Size] = vec2_subtract(enlarged[eShapeRect.Size], enlarged[eShapeRect.Origin]);
 return enlarged;

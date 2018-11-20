@@ -5,6 +5,7 @@ var cy = argument1;
 var rad = argument2;
 
 var shape = [];
-shape[eCircle.Center] = vec2(cx,cy);
-shape[eCircle.Radius] = rad;
+shape[SHAPE_TYPE] = eShapeType.Circle;
+shape[eShapeCircle.Center] = vec2(cx,cy);
+shape[eShapeCircle.Radius] = rad;
 return shape;

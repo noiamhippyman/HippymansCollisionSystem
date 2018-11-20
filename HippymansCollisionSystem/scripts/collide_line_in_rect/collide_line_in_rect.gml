@@ -2,11 +2,11 @@
 /// @arg line,rect
 var l = argument0;
 var r = argument1;
-var ro = r[eRect.Origin];
-var rs = r[eRect.Size];
+var ro = r[eShapeRect.Origin];
+var rs = r[eShapeRect.Size];
 
-var lbase = l[eLine.Base];
-var ldir = l[eLine.Direction];
+var lbase = l[eShapeLine.Base];
+var ldir = l[eShapeLine.Direction];
 
 var n = vec2_rotate_90(ldir);
 

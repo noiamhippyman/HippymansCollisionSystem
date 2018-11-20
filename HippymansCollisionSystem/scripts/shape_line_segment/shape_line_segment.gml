@@ -6,6 +6,7 @@ var bx = argument2;
 var by = argument3;
 
 var shape = [];
-shape[eLineSegment.A] = vec2(ax,ay);
-shape[eLineSegment.B] = vec2(bx,by);
+shape[SHAPE_TYPE] = eShapeType.LineSegment;
+shape[eShapeLineSegment.Point1] = vec2(ax,ay);
+shape[eShapeLineSegment.Point2] = vec2(bx,by);
 return shape;
