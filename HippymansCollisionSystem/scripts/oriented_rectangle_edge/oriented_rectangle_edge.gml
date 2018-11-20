@@ -2,7 +2,13 @@
 /// @arg r,nr
 var r = argument0;
 var nr = argument1;
+var rinst = r[SHAPE_INSTANCE];
+var rcenter = r[eShapeOrientedRect.Center];
 
+if (instance_exists(rinst)) {
+	rcenter[0] += rinst.x;
+	rcenter[1] += rinst.y;
+}
 
 var edge = shape_line_segment(0,0,0,0);
 var a = r[eShapeOrientedRect.HalfSize];

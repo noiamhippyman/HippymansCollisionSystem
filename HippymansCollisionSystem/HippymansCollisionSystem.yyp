@@ -114,7 +114,7 @@
             "Key": "1461dc3e-0262-4bcc-b6e4-23575b6e71a3",
             "Value": {
                 "id": "a88c2a43-c9af-47a3-9d62-574cf3ee2bf2",
-                "resourcePath": "objects\\CollisionDemo\\CollisionDemo.yy",
+                "resourcePath": "objects\\CollisionScriptsDemo\\CollisionScriptsDemo.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -194,7 +194,7 @@
             "Key": "323fbd83-f4d6-463b-bc7f-986e0d159258",
             "Value": {
                 "id": "c892e233-c494-4189-83cd-230857eaa9bd",
-                "resourcePath": "scripts\\global_defines\\global_defines.yy",
+                "resourcePath": "scripts\\hcs_global_defines\\hcs_global_defines.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -418,7 +418,7 @@
             "Key": "7d659a42-ef47-4ffe-aae6-055d34968808",
             "Value": {
                 "id": "577ebf51-2963-450d-9f6a-11c4950a05ad",
-                "resourcePath": "objects\\object1\\object1.yy",
+                "resourcePath": "objects\\ShapeGroupsDemo\\ShapeGroupsDemo.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -599,6 +599,14 @@
             }
         },
         {
+            "Key": "bb1c7a85-ed42-49fd-b45f-e1d0e8686ebc",
+            "Value": {
+                "id": "24d6dbb5-077f-46f5-be10-5a5738c6e021",
+                "resourcePath": "scripts\\shape_line_angle\\shape_line_angle.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "bcbcef8b-a588-402e-ae1f-a262a55bc7bd",
             "Value": {
                 "id": "f6cd14de-5ee8-434e-b72e-c8662a088b7c",
@@ -708,6 +716,14 @@
                 "id": "51912c6d-3bf3-41a9-92f9-ff4676679fd4",
                 "resourcePath": "scripts\\collide_line_seg_in_oriented_rect\\collide_line_seg_in_oriented_rect.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d3cf141d-5873-47a9-b0b1-80b7664aecd4",
+            "Value": {
+                "id": "8a3fad9a-6c69-40b6-b3d1-6d5146b57e51",
+                "resourcePath": "views\\d3cf141d-5873-47a9-b0b1-80b7664aecd4.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -866,7 +882,7 @@
             "Key": "f6c945d3-6aac-409d-8106-33f3dfcc881a",
             "Value": {
                 "id": "843b5b45-b24e-4986-8c44-ea31aa30f732",
-                "resourcePath": "rooms\\room1\\room1.yy",
+                "resourcePath": "rooms\\rmShapeGroupsDemo\\rmShapeGroupsDemo.yy",
                 "resourceType": "GMRoom"
             }
         }
@@ -893,6 +909,7 @@
         "500d3d37-1a78-4004-a81a-f5671023a275",
         "f62d02e3-5e43-482e-841f-130aaa7d2da1",
         "83c3c3f5-af6b-4a07-86af-36bb2fac1b16",
+        "bb1c7a85-ed42-49fd-b45f-e1d0e8686ebc",
         "980f85a2-7562-441d-a2f6-0897bd3ee648",
         "927d2ccc-6403-4d13-8f5c-159db69f3db2",
         "3f377306-8472-4b52-b3a1-a4a10361093f",

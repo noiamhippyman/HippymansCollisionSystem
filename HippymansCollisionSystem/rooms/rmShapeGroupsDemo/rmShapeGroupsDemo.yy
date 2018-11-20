@@ -1,6 +1,6 @@
 
 {
-    "name": "room1",
+    "name": "rmShapeGroupsDemo",
     "id": "f6c945d3-6aac-409d-8106-33f3dfcc881a",
     "creationCodeFile": "",
     "inheritCode": false,

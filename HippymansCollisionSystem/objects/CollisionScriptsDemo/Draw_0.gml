@@ -1,20 +1,5 @@
 var t = (current_time / 100) mod 360;
-/*
-	RECTS,
-	CIRCLES,
-	LINES,
-	SEGMENTS,
-	ORIENTED_RECTS,
-	PT_IN_CIRCLE,
-	PT_IN_RECT,
-	LINE_IN_CIRCLE,
-	LINE_IN_RECT,
-	LNSEG_IN_CIRCLE,
-	LNSEG_IN_RECT,
-	CIRCLE_IN_RECT,
-	CIRCLE_IN_ORIENTED_RECT,
-	RECT_IN_ORIENTED_RECT,
-*/
+
 var demoStr = "";
 switch (demoIndex) {
 	case DEMO.RECTS:

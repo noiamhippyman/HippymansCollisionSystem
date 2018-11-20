@@ -2,8 +2,15 @@
 /// @arg segment,rect
 var s = argument0;
 var r = argument1;
+
+var sinst = s[SHAPE_INSTANCE];
+
 var sp1 = s[eShapeLineSegment.Point1];
 var sp2 = s[eShapeLineSegment.Point2];
+if (instance_exists(sinst)) {
+	sp1[0] += x; sp2[0] += x;
+	sp1[1] += y; sp2[1] += y;
+}
 
 var n = vec2_subtract(sp1,sp2);
 

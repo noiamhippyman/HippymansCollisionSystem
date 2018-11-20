@@ -3,4 +3,11 @@
 var circle = argument0;
 var c = circle[eShapeCircle.Center];
 var r = circle[eShapeCircle.Radius];
-draw_circle(c[0],c[1],r,true);
+var inst = circle[SHAPE_INSTANCE];
+var cx = c[0];
+var cy = c[1];
+if (instance_exists(inst)) {
+	cx += inst.x;
+	cy += inst.y;
+}
+draw_circle(cx,cy,r,true);
