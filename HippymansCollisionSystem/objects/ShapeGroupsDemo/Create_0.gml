@@ -7,22 +7,14 @@
 
 hcs_global_defines();
 
-line = shape_line_angle(RW50,RH75,0);
-line2 = shape_line(room_width * 0.1,RH75,0,1);
-lineSeg = shape_line_segment(RW25,RH50,RW75,RH50);
-circle = shape_circle(RW25,RH50,32);
-rect = shape_rectangle(RW50,RH50,64,64);
-orect = shape_oriented_rect(RW75,RH50,32,32,45);
+group1 = ds_list_create();
+ds_list_add(group1, shape_circle(0,0,32,id));
+ds_list_add(group1, shape_circle(65,0,32,id));
+ds_list_add(group1, shape_circle(-65,0,32,id));
+ds_list_add(group1, shape_circle(0,65,32,id));
+ds_list_add(group1, shape_circle(0,-65,32,id));
 
-shapes = ds_list_create();
-ds_list_add(shapes, line);
-ds_list_add(shapes, line2);
-ds_list_add(shapes, lineSeg);
-ds_list_add(shapes, circle);
-ds_list_add(shapes, rect);
-ds_list_add(shapes, orect);
-ds_list_add(shapes, shape_circle(0,0,32,id));
-ds_list_add(shapes, shape_circle(65,0,32,id));
-ds_list_add(shapes, shape_circle(-65,0,32,id));
-ds_list_add(shapes, shape_circle(0,65,32,id));
-ds_list_add(shapes, shape_circle(0,-65,32,id));
+
+group2 = ds_list_create();
+ds_list_add(group2, shape_line(RW50,RH75,1,0));
+ds_list_add(group2, shape_oriented_rect(RW50,RH50,32,32,45));
