@@ -8,8 +8,17 @@ var sinst = s[SHAPE_INSTANCE];
 var sp1 = s[eShapeLineSegment.Point1];
 var sp2 = s[eShapeLineSegment.Point2];
 if (instance_exists(sinst)) {
-	sp1[0] += x; sp2[0] += x;
-	sp1[1] += y; sp2[1] += y;
+	//sp1[0] += x; sp2[0] += x;
+	//sp1[1] += y; sp2[1] += y;
+	var len = point_distance(0,0,sp1[0],sp1[1]);
+	var dir = point_direction(0,0,sp1[0],sp1[1]) + sinst.image_angle;
+	sp1[0] = sinst.x + lengthdir_x(len,dir);
+	sp1[1] = sinst.y + lengthdir_y(len,dir);
+	
+	len = point_distance(0,0,sp2[0],sp2[1]);
+	dir = point_direction(0,0,sp2[0],sp2[1]) + sinst.image_angle;
+	sp2[0] = sinst.x + lengthdir_x(len,dir);
+	sp2[1] = sinst.y + lengthdir_y(len,dir);
 }
 
 var n = vec2_subtract(sp1,sp2);

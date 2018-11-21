@@ -12,8 +12,14 @@ var y2 = s[1];
 var ox = o[0];
 var oy = o[1];
 if (instance_exists(inst)) {
-	ox += inst.x;
-	oy += inst.y;
+	//ox += inst.x;
+	//oy += inst.y;
+	var len = point_distance(0,0,ox,oy);
+	var dir = point_direction(0,0,ox,oy) + inst.image_angle;
+	ox = inst.x + lengthdir_x(len,dir);
+	oy = inst.y + lengthdir_y(len,dir);
+	
+	a += inst.image_angle;
 	
 }
 matrix_set(matrix_world, matrix_build(ox,oy,0, 0,0,a, 1,1,1));

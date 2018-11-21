@@ -5,8 +5,12 @@ var r = argument1;
 var rinst = r[SHAPE_INSTANCE];
 var ro = r[eShapeRect.Origin];
 if (instance_exists(rinst)) {
-	ro[0] += rinst.x;
-	ro[1] += rinst.y;
+	//ro[0] += rinst.x;
+	//ro[1] += rinst.y;
+	var len = point_distance(0,0,ro[0],ro[1]);
+	var dir = point_direction(0,0,ro[0],ro[1]) + rinst.image_angle;
+	ro[0] = rinst.x + lengthdir_x(len,dir);
+	ro[1] = rinst.y + lengthdir_y(len,dir);
 }
 var rs = r[eShapeRect.Size];
 var x1 = ro[0];

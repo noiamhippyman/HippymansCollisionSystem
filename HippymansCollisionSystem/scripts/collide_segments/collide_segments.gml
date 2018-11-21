@@ -10,13 +10,31 @@ var bp1 = b[eShapeLineSegment.Point1];
 var bp2 = b[eShapeLineSegment.Point2];
 
 if (instance_exists(instA)) {
-	ap1[0] += instA.x; ap2[0] += instA.x;
-	ap1[1] += instA.y; ap2[1] += instA.y;
+	//ap1[0] += instA.x; ap2[0] += instA.x;
+	//ap1[1] += instA.y; ap2[1] += instA.y;
+	var len = point_distance(0,0,ap1[0],ap1[1]);
+	var dir = point_direction(0,0,ap1[0],ap1[1]) + instA.image_angle;
+	ap1[0] = instA.x + lengthdir_x(len,dir);
+	ap1[1] = instA.y + lengthdir_y(len,dir);
+	
+	len = point_distance(0,0,ap2[0],ap2[1]);
+	dir = point_direction(0,0,ap2[0],ap2[1]) + instA.image_angle;
+	ap2[0] = instA.x + lengthdir_x(len,dir);
+	ap2[1] = instA.y + lengthdir_y(len,dir);
 }
 
 if (instance_exists(instB)) {
-	bp1[0] += instB.x; bp2[0] += instB.x;
-	bp1[1] += instB.y; bp2[1] += instB.y;
+	//bp1[0] += instB.x; bp2[0] += instB.x;
+	//bp1[1] += instB.y; bp2[1] += instB.y;
+	var len = point_distance(0,0,bp1[0],bp1[1]);
+	var dir = point_direction(0,0,bp1[0],bp1[1]) + instB.image_angle;
+	bp1[0] = instB.x + lengthdir_x(len,dir);
+	bp1[1] = instB.y + lengthdir_y(len,dir);
+	
+	len = point_distance(0,0,bp2[0],bp2[1]);
+	dir = point_direction(0,0,bp2[0],bp2[1]) + instB.image_angle;
+	bp2[0] = instB.x + lengthdir_x(len,dir);
+	bp2[1] = instB.y + lengthdir_y(len,dir);
 }
 
 var axisA = shape_line(0,0,0,0);

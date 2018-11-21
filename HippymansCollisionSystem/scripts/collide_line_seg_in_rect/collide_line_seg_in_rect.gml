@@ -10,13 +10,26 @@ var ro = r[eShapeRect.Origin];
 var rs = r[eShapeRect.Size];
 
 if (instance_exists(sinst)) {
-	sp1[0] += sinst.x; sp2[0] += sinst.x;
-	sp1[1] += sinst.y; sp2[1] += sinst.y;
+	//sp1[0] += sinst.x; sp2[0] += sinst.x;
+	//sp1[1] += sinst.y; sp2[1] += sinst.y;
+	var len = point_distance(0,0,sp1[0],sp1[1]);
+	var dir = point_direction(0,0,sp1[0],sp1[1]) + sinst.image_angle;
+	sp1[0] = sinst.x + lengthdir_x(len,dir);
+	sp1[1] = sinst.y + lengthdir_y(len,dir);
+	
+	len = point_distance(0,0,sp2[0],sp2[1]);
+	dir = point_direction(0,0,sp2[0],sp2[1]) + sinst.image_angle;
+	sp2[0] = sinst.x + lengthdir_x(len,dir);
+	sp2[1] = sinst.y + lengthdir_y(len,dir);
 }
 
 if (instance_exists(rinst)) {
-	ro[0] += rinst.x;
-	ro[1] += rinst.y;
+	//ro[0] += rinst.x;
+	//ro[1] += rinst.y;
+	var len = point_distance(0,0,ro[0],ro[1]);
+	var dir = point_direction(0,0,ro[0],ro[1]) + rinst.image_angle;
+	ro[0] = rinst.x + lengthdir_x(len,dir);
+	ro[1] = rinst.y + lengthdir_y(len,dir);
 }
 
 var sLine = shape_line(0,0,0,0);

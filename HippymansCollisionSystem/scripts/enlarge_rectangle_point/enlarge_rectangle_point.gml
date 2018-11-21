@@ -6,8 +6,12 @@ var v = argument1;
 var ro = r[eShapeRect.Origin];
 var rs = r[eShapeRect.Size];
 if (instance_exists(rinst)) {
-	ro[0] += rinst.x;
-	ro[1] += rinst.y;
+	//ro[0] += rinst.x;
+	//ro[1] += rinst.y;
+	var len = point_distance(0,0,ro[0],ro[1]);
+	var dir = point_direction(0,0,ro[0],ro[1]) + rinst.image_angle;
+	ro[0] = rinst.x + lengthdir_x(len,dir);
+	ro[1] = rinst.y + lengthdir_y(len,dir);
 }
 
 var enlarged = shape_rectangle(
